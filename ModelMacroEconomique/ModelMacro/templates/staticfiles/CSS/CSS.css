@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 mai 2014, 02:10:15
+    Author     : Khadime Wade
+*/
+
+body
+{
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+.ErreurMessage{
+    display: inline;
+    color: ff0000;
+    display: none;
+}
