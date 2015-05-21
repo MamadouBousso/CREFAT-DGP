@@ -1,0 +1,43 @@
+"id_Variable;nom_Variable;type;description;sect_var;id_Valeur";;;;;
+10;agriviv;exogene;agriculture vivriére;1;1
+20;agrindexp;exogene;agriculture industrielle ou d'exportation;1;2
+30;chasselev;exogene;elevage et chasse;1;3
+40;sylvexfor;exogene;sylviculture,exploitation forestiere;1;4
+50;pec;exogene;peche;1;5
+60;actex;exogene;activites extractives;2;6
+70;transcons;exogene;transformation et conservation de viande,poisson;2;8
+80;fabcorgrali;exogene;fabrication de corps gras alimentaires;2;7
+90;travgrain;exogene;travail de grains,fabrication de produits;2;9
+100;fabpralicer;exogene;fabrication de produits alimentaires cerealiers;2;10
+110;fabtransuc;exogene;fabrication de sucre,transformation;2;11
+120;fabpralinca;exogene;fabrication de produits alimentaires n.c.a;2;12
+130;fabois;exogene;fabrication de boissons;2;13
+140;fabprotab;exogene;fabrication de produits à base de tabac;2;14
+150;egrecotex;exogene;egrenage de coton et fabrication des textiles;2;15
+160;fabcuir;exogene;fabrication du cuir;2;16
+170;traboifabar;exogene;travail du bois,fabrication d'articles;2;17
+180;fabpap;exogene;fabrication de papier,carton;2;18
+190;rafpet;exogene;raffinage petrole,cokefaction;2;19
+200;fabprochim;exogene;fabrication de produits chimiques;2;20
+210;fabproca;exogene;fabrication de produits en caoutchouc;2;21
+220;fabver;exogene;fabrication de verre,poterie et materiaux de construction;2;22
+230;fabfonmet;exogene;metallurgie,fonderie,fabrication;2;23
+240;fabmac;exogene;fabrication de machines;2;24
+250;fabequipap;exogene;fabrication d'equipements,d'appareils;2;25
+260;comatrans;exogene;construction de materiels de transports;2;26
+270;fabmobnca;exogene;fabrication de mobilier,fabrication de n.c.a;2;27
+280;gazeleceau;exogene;electricite,gaz et eau;2;28
+290;cons;exogene;construction ;2;29
+300;com;exogene;commerce;3;30
+310;sevrep;exogene;services de la reparation;3;35
+320;heberest;exogene;services d'hebergement et de restauration;3;36
+330;trans;exogene;transports;3;31
+340;postel;exogene;postes et telecommunications;3;32
+350;serfin;exogene;services financiers;3;37
+360;actimmo;exogene;activitesimmobilieres;3;38
+370;servent;exogene;activites des services aux entreprises;3;39
+380;actadpub;exogene;activites d'administration publique;3;42
+390;formeduc;exogene;education et formation;3;33
+400;santact;exogene;activites de sante et action sociale;3;34
+410;actcar;exogene;activites à caractere collectif ou personnel;3;40
+420;fininter;exogene;activites d'intermediation financiere i.m;3;41
