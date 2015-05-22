@@ -12,7 +12,8 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^variable$', views.variable, name='variable'),
     url(r'^equation$', views.equation, name='equation'),
-    url(r'^parametrage$', views.equation, name='parametrage'),
+    url(r'^parametrage$', views.parametrage, name='parametrage'),
+    url(r'^systeme$', views.systeme, name='systeme'),
     url(r'^date$', views.date_actuelle, name='date'),
 
 ]

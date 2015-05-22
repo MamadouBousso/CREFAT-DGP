@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ModelMacroEconomique.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join('F:/stageCrefat/CREFAT-DGP2/Modelisation', 'bd_modeleMacro_crefat.sq3'),
+        'NAME': os.path.join('F:/stageCrefat/CREFAT-DGP/Modelisation', 'bd_modeleMacro_crefat.sq3'),
     }
 }
 

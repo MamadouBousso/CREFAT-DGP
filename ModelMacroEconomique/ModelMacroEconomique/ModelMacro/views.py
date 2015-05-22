@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from datetime import datetime
 from django.shortcuts import render
+from .models import Variable
 
 # Create your views here.
 def index(request):
@@ -11,9 +12,8 @@ def index(request):
     context = RequestContext(request, None)
     return HttpResponse(template.render(context))
 def variable(request):
-    template = loader.get_template('ModelMacro/Variable.html')
-    context = RequestContext(request, None)
-    return HttpResponse(template.render(context))
+    variable = Variable.objects.all()
+    return render(request, 'ModelMacro/Variable.html', {'variables': variable})
 def equation(request):
     template = loader.get_template('ModelMacro/equation.html')
     context = RequestContext(request, None)
@@ -28,4 +28,3 @@ def systeme(request):
     return HttpResponse(template.render(context))
 def date_actuelle(request):
     return render(request, 'ModelMacro/date.html', {'date': datetime.now()})
-    

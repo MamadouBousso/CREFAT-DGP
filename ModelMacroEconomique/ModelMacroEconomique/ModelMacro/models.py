@@ -110,9 +110,9 @@ class Valeur(models.Model):
 class Variable(models.Model):
     id_variable = models.IntegerField(db_column='id_Variable', primary_key=True, blank=True, null=False)
     nom_variable = models.TextField(db_column='nom_Variable', blank=True, null=True)  
-    type = models.TextField(blank=True, null=True)
+    typeVariable = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
-    sect_var = models.ForeignKey(Secteur, db_column='sect_var', blank=True, null=True)
+    sect_var = models.ForeignKey(Secteur, db_column='id_Secteur', blank=True, null=True)
     id_valeur = models.ForeignKey(Valeur, db_column='id_Valeur', blank=True, null=True)
 
     class Meta:

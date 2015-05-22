@@ -3,9 +3,15 @@
    {% load static %}
         <title>Model Macro Economique</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="{% static 'CSS/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
         <link href="{% static 'CSS/bootstrap.css'%}" rel="stylesheet" type="text/css">
-        <link href="% static 'CSS/CSS.cs'%}" rel="stylesheet" type="text/css">
-        
+        <link href="{% static 'CSS/dataTables.bootstrap.css'%}" rel="stylesheet" type="text/css">
+        <link href="{% static 'CSS/CSS.css'%}" rel="stylesheet" type="text/css">
+        <script src="{% static 'js/jquery-1.11.1.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.min.js'%}"></script>
+        <script src="{% static 'js/JsFonction.js'%}"></script>
+        <script src="{% static 'js/jquery.dataTables.min.js'%}"></script>
+        <script src="{% static 'js/dataTables.bootstrap.js'%}"></script>
         
              <!-- Le fav and touch icons -->
         <link rel="shortcut icon" href="../assets/ico/favicon.ico">
@@ -24,22 +30,59 @@
               </a>
               <a class="brand" href="#">Model Macro Economique</a>
               <div class="nav-collapse">
-                <ul class="nav">
-                  <li><a href="#">Accueil</a></li>
-                  <li class="active"><a href="#">Variables</a></li>
-                  <li><a href="#">Equations</a></li>
-                  <li><a href="#">Système d'Equation</a></li>
-                  <li><a href="#">Parametrage</a></li>
-                </ul>
+                    <ul class="nav">
+                       <li><a href="{% url 'ModelMacro.views.index' %}">Accueil</a></li>
+                      <li class="active"><a href="{% url 'ModelMacro.views.variable' %}">Variables</a></li>
+                      <li><a href="{% url 'ModelMacro.views.equation' %}">Equations</a></li>
+                      <li><a href="{% url 'ModelMacro.views.systeme' %}">Système d'Equation</a></li>
+                      <li><a class="dropdown" class="dropdown-toggle" href="#">Parametrage<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Lien #2-a</a></li>
+                            <li><a href="#">Lien #2-b</a></li>
+                            <li><a href="#">Lien #2-c</a></li>
+                        </ul>
+                     </li>
+                      
+                    </ul>
+                
               </div><!--/.nav-collapse -->
             </div>
           </div>
     </div>
         <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+                    <form action="ModelMacro.views.variable" method="POST">
+                         <caption>
+                            <h4 style="text-align: center">Liste Des Variables</h4>
+                        </caption>
+                    <table id="variable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                       
+                        <thead>
+                            <tr>
+                                <th>Id Variable</th><th>Nom</th><th>Type</th><th>Description</th>
+                                <th>Secteur</th><th>Valeur</th><th>Opération</th></thead>
+                        <tbody>
+                           {% for variable in variables %}
+                         <tr>
+                        <td>{{variable.id_variable}}</td><td>{{variable.nom_variable}}</td><td>{{variable.typeVariable}}</td>
+                        <td>{{variable.description}}</td><td>{{variable.sect_var}}</td><td>{{variable.id_valeur}}</td>
+                        <td><div class="btn-group"><button name="detail" class="btn btn-info " values="{{variable.id_variable}}">Detail
+                        <i class="icon-white icon-print"></i></button>
+                        </td>
+                        </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </form>
+                    
+                </div>
+                <div class="span1"></div>
+                </div>
             
         </div>
         
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        
     </body>
 </html>
